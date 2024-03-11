@@ -1,13 +1,66 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.home-btn-dim {
+  max-width: 700px;
+  height: 129px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 42px;
+}
+.service-btn-dim {
+  max-width: 700px;
+  border-radius: 12px;
+  height: 129px;
+  font-weight: 600;
+  font-size: 42px;
+}
+.inflooms-btn {
+  background: linear-gradient(111deg, #3653ae 0%, rgba(54, 83, 174, 0) 100%);
+  color: white;
+  border: 1px solid #3653ae;
+  padding: 19px 51px;
+  line-height: 110%;
+  color: #fff;
+}
+.inflooms-span {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  color: #fff;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.inflooms-btn:hover {
+  background-color: #1e183a;
+  scale: 1.1;
+  transition: ease-in-out 0.3s;
+}
+
+.inflooms-btn::after {
+  content: "";
+  background: #3653ae;
+  width: 0;
+  height: 100%;
+  border-radius: 12px;
+  position: absolute;
+  inset: 0;
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  z-index: -1;
+}
+
+.inflooms-btn:hover::after {
+  width: 100%;
+}
+
+.inflooms-btn::after {
+  transition: all 0.5s linear;
+}
+.contact-btn-dim {
+  max-width: 400px;
+  border-radius: 12px;
+  height: 90px;
+  font-weight: 400;
+  font-size: 25px;
 }
